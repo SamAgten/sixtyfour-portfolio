@@ -28,7 +28,7 @@ import ContactForm from './components/ContactForm.vue';
 
 main
 {
-  width: calc(var(--header-center-offset) * 2 + var(--header-content-width) * 2);
+  width: 100%;
   margin: auto;
 }
 
@@ -56,5 +56,13 @@ footer h3
   margin-top: 50px
 }
 
+
+@media (min-width: 1200px) 
+{
+  main 
+  {
+    width: calc(var(--header-center-offset) * 2 + var(--header-content-width) * 2);
+  }
+}
 
 </style>

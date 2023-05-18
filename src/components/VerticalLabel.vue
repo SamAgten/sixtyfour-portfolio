@@ -17,6 +17,14 @@ defineProps({
 <style scoped>
 .label-container
 {
+    width: 0px;
+    visibility: hidden;
+}
+
+@media (min-width: 1200px) {
+.label-container
+{
+    visibility: visible;
     width: 150px;
 }
 
@@ -27,5 +35,6 @@ defineProps({
     writing-mode: vertical-lr;
     color: var(--color-header-text-main);
     margin: 0 auto;
+}
 }
 </style>

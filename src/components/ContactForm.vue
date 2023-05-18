@@ -123,8 +123,7 @@ textarea
 #contact-container
 {
     display: flex;
-    width: 100%;
-    margin-bottom: 50px;
+    margin: 0px 50px 50px 50px;
     position: relative;
 }
 
@@ -159,6 +158,13 @@ textarea
   opacity: 0;
   -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
+}
+
+@media (min-width: 1200px) {
+#contact-container
+    {
+        margin: 0px 0px 50px 0px;
+    }
 }
 
 </style>
