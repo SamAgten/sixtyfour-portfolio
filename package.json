@@ -8,9 +8,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vueuse/core": "^10.1.2",
+    "@vueuse/motion": "^2.0.0-beta.12",
     "intersection-observer": "^0.12.2",
-    "vue": "^3.3.2",
-    "vue-scrollama": "^2.0.6"
+    "scrollama": "^3.2.0",
+    "vue": "^3.3.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",

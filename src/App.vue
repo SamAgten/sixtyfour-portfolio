@@ -1,7 +1,43 @@
 <script setup>
 import Header from './components/Header.vue'
 import ProjectList from './components/ProjectList.vue'
-import ContactForm from './components/ContactForm.vue';
+import ContactForm from './components/ContactForm.vue'
+import scrollama from 'scrollama';
+import { onBeforeUnmount, onMounted } from 'vue';
+
+const scroller = scrollama();
+
+onMounted(() => {
+  console.log("mounted");
+
+  scroller
+  .setup({
+    step: '.step',
+    offset: 0.6,
+  })
+  .onStepEnter((response) => {
+    console.log(response.direction);
+    if(response.direction == 'down')
+    {
+      console.log('add: ' + response.element.className);
+      response.element.classList.add('on-enter');
+
+    }
+  })
+  .onStepExit((response) => 
+  {  
+    if(response.direction == 'up')
+    {
+      console.log('remove: ' + response.element);
+      response.element.classList.remove('on-enter');
+    }
+  });
+});
+
+onBeforeUnmount(() => {
+  scroller.destroy();
+})
+
 </script>
 
 <template>
@@ -13,7 +49,6 @@ import ContactForm from './components/ContactForm.vue';
       <ProjectList></ProjectList>
       <ContactForm />
   </main>
-
   <footer>
     <h3>Sixtyfour</h3>
     <p>Sam Agten</p>
@@ -30,6 +65,12 @@ main
 {
   width: 100%;
   margin: auto;
+}
+
+.box
+{
+  width: 100px;
+  height: 100px;
 }
 
 footer

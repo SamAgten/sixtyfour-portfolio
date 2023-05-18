@@ -22,19 +22,22 @@ defineProps({
 }
 
 @media (min-width: 1200px) {
-.label-container
-{
-    visibility: visible;
-    width: 150px;
-}
-
-.label-container h1
-{
-    background-color: var(--color-header-main);
-    text-orientation: upright;
-    writing-mode: vertical-lr;
-    color: var(--color-header-text-main);
-    margin: 0 auto;
-}
+    .label-container
+    {
+        visibility: visible;
+        width: 150px;
+    }
+    
+    .label-container h1
+    {
+        background-color: var(--color-header-main);
+        text-orientation: upright;
+        writing-mode: vertical-lr;
+        color: var(--color-header-text-main);
+        margin: 0 auto;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 50px;
+    }
 }
 </style>
