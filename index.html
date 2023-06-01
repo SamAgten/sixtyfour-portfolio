@@ -1,15 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sixtyfour</title>
-    <link rel="stylesheet" href="https://use.typekit.net/gfq6evv.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sixtyfour</title>
+        <link rel="icon" href="./favicon.ico">
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="https://use.typekit.net/gfq6evv.css">
+        <link rel="stylesheet" href="./header.css">
+        <link rel="stylesheet" href="./projects.css">
+        <link rel="stylesheet" href="./contact.css">
+        
+    </head>
+    
+    <body>
+        
+        <div class="container">
+            
+            <header>
+                <div id="header-main">
+                    <div id="logo-container">
+                        <img alt="Logo" class="logo" src="./images/Logo-White@4x.png"/>
+                    </div>
+                    <div id="header-text">
+                      <h1 class="js-scroll">GAMES THAT DEFY EXPECTATION</h1>
+                      <p class="js-scroll">An international award-winning studio that creates games with a focus on innovative interaction, visual polish and a whallop of board-game inspired design.</p>
+                      <h1 class="js-scroll">GAME DEV FOR HIRE</h1>
+                      <p class="js-scroll">We excel at the seasoning!</p>
+                    </div>
+                </div>
+                <div id="header-crumbs">
+                    <a onclick="scrollToMainContent()">PROJECTS</a>
+                    <span>/</span>
+                    <a onclick="scrollToContact()">CONTACT</a>
+                    
+                </div>
+                <div id="header-nav">
+                    <div class="header-line js-scroll"></div>
+                    <div id="header-nav-center">
+                        <img class="cube js-scroll" alt="Cube" src="./images/cube@4x.png" width="50"/>
+                        <img class="arrow" alt="Arrow" src="./images/arrow@4x.png" width="50"/>
+                    </div>
+                    <div class="header-line js-scroll"></div>
+                </div>
+                
+            </header>
+            
+            <main>
+                    
+                    <!--MIDNIGHT PROTOCOL-->
+
+                    <div class="project">
+                        <div class="project-content">
+                            
+                        <div class="video-wrapper">
+                            <video autoplay muted loop id="myVideo">
+                                <source src="./videos/midnight-protocol.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                              </video>
+        
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285 80" preserveAspectRatio="xMidYMid slice">
+                                <defs>
+                                  <mask id="midnight-mask" x="0" y="0" width="100%" height="100%" >
+                                    <rect x="0" y="0" width="100%" height="100%" />
+                                    <text id="midnight-text" x="50%" y="50%">MIDNIGHT</text>
+                                    <text id="protocol-text" x="50%" y="80%">PROTOCOL</text>
+                                  
+                                </mask>
+                                </defs>
+                                <rect id="midnight-letters" x="0" y="0" width="100%" height="100%" />
+                              </svg>
+
+                            
+                        </div>
+                        <div class="slot">
+                            <p>Hack into servers, beat security and steal encrypted data in a world where your identity is just another network address.</p>
+                            <p>Midnight Protocol is a tactical narrative-driven RPG in a future coming to grips with unprecedented digital challenges. Make your way through an engaging story with the help of an accessible command-line interface and a host of hacking software.</p>
+                            <p>Midnight Protocol is a co-production between <a>LuGus Studios</a> and Sixtyfour in support by publisher <a>Iceberg Interactive.</a></p>
+                            <p><iframe  frameborder="0" height="190" src="https://store.steampowered.com/widget/1162700/" width="100%"></iframe></p>
+       
+                        
+                        </div>
+
+                        </div>
+                        <div  class="project-line-decoration">
+                            <h4 class="project-number js-scroll">1</h4>
+                            <h2>_MP</h2>
+                            <img alt="Cube-dark" src="./images/cube_dark@4x.png" class="cube js-scroll"/>
+                            <div class="project-line js-scroll"></div>
+                        </div>
+                    </div>
+
+                    
+                    <!--STIP-->
+                    
+                    
+                    <div class="project">
+                        <div class="project-content">
+                            
+                        <div class="video-wrapper">
+                            <video autoplay muted loop id="myVideo">
+                                <source src="./videos/stip.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                              </video>
+        
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285 80" preserveAspectRatio="xMidYMid slice">
+                                <defs>
+                                  <mask id="mask" x="0" y="0" width="100%" height="100%" >
+                                    <rect x="0" y="0" width="100%" height="100%" />
+                                    <text id="stip-text" x="50%" y="80%">STIP</text>
+                                  </mask>
+                                </defs>
+                                <rect id="stip-letters" x="0" y="0" width="100%" height="100%" />
+                              </svg>
+
+                            
+                        </div>
+                        <div class="slot">
+                            <p>Stip is an upcoming puzzle horror game.</p>
+                            <p>Stip is a fun and relaxing puzzle game. Solve puzzels, by searching for the next number in the sequence. Nothing is wrong here. Ignore that buzzing in your ear and that itch behind your eyes. All you need to do is find the next number. Everything is going to be fine.</p>
+                            <p>Stip is currently in development.</p>
+                        </div>
+
+                        </div>
+                        <div  class="project-line-decoration">
+                            <h4 class="project-number js-scroll">2</h4>
+                            <h2>STIP</h2>
+                            <img alt="Cube-dark" src="./images/cube_dark@4x.png" class="cube js-scroll"/>
+                            <div class="project-line js-scroll"></div>
+                        </div>
+                    </div>
+            
+                </div>
+
+                
+            </main>
+            
+            
+            <div class="contact">
+
+                <div id="contact-header">
+                    <div class="contact-line js-scroll"></div>
+                    <div id="contact-line-center">
+                        <img class="cube js-scroll" alt="Cube" src="./images/cube_dark@4x.png"/>
+                    </div>
+                    <div class="contact-line js-scroll"></div>
+                </div>
+                <h2>GET IN TOUCH.</h2>
+                <div class="contact-container">
+                    <div>
+                        <img alt="Email" src="./images/email.png"/>
+                        <h4>EMAIL</h4>
+                        <p>info@sixtyfour.be</p>
+                    </div>
+                    <div>
+                        <img alt="Twitter" src="./images/twitter.png"/>
+                        <h4>TWEET</h4>
+                        <p>@SixtyfourBE</p>
+                    </div>
+                </div>
+
+            </div>
+            <footer>
+                <h3>Sixtyfour</h3>
+                <p>Sam Agten</p>
+                <p>info@sixtyfour.be</p>
+                <p>BE0736.929.388</p>
+                <p id="copyright">Copyright © Sam Agten 2023. All rights reserved.</p>
+            </footer>
+            
+        </div>
+        
+        <script src="./script.js"></script>
+    </body>
 </html>
