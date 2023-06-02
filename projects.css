@@ -159,4 +159,63 @@ svg #protocol-text {
 }
 svg rect {
   fill: #ffffff;
+}
+svg .edge {
+  visibility: hidden;
+}
+
+@media (max-width: 550px) {
+  svg #midnight-text {
+    font-size: 22px;
+  }
+  svg #protocol-text {
+    font-size: 21px;
+  }
+  svg #stip-text {
+    font-size: 55px;
+  }
+  svg .edge {
+    fill: black;
+    visibility: visible;
+  }
+  .project {
+    width: 100%;
+    position: relative;
+  }
+  .project-content {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .project-line-decoration {
+    margin-left: 0px;
+    position: absolute;
+    right: 20px;
+    height: 100%;
+  }
+  .project-line-decoration > h4 {
+    top: -50px;
+    right: 0px;
+  }
+  .project-line-decoration > h2 {
+    right: -85px;
+  }
+  .project-line-decoration img {
+    margin-top: 200px;
+  }
+  .project-line {
+    flex-grow: 0;
+    height: calc(100% - 120px - 200px - 40px);
+  }
+  .project-content p {
+    max-width: 430px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  video {
+    height: auto;
+    width: 100%;
+    display: block;
+    margin: auto;
+  }
 }/*# sourceMappingURL=projects.css.map */
