@@ -157,14 +157,6 @@ svg #midnight-text {
 svg #protocol-text {
   font-size: 24px;
 }
-svg #midnight-letters {
-  -webkit-mask: url(#midnight-mask);
-  mask: url(#midnight-mask);
-}
-svg #stip-letters {
-  -webkit-mask: url(#mask);
-  mask: url(#mask);
-}
 svg rect {
   fill: #ffffff;
 }/*# sourceMappingURL=projects.css.map */

@@ -2,9 +2,10 @@ const scrollElements = document.querySelectorAll(".js-scroll");
 const projectNumbers = document.querySelectorAll(".project-number");
 const inViewPercentage = 0.75;
 
+
+
 const projectNumbersMap = new Map();
 projectNumbers.forEach((el) => {
-    console.log(Number(el.textContent));
     projectNumbersMap.set(el, Number(el.textContent));
 })
 
@@ -76,3 +77,6 @@ function scrollToContact()
     const content = document.querySelector(".contact");
     content.scrollIntoView({ behavior: 'smooth', block: 'center' })
 }
+
+
+handleScrollAnimation();
