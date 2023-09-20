@@ -1,8 +1,8 @@
 (function(storyContent) {
 
-    console.log("Cookies: " + Cookies.get('progress'));
-
     var story = new inkjs.Story(storyContent);
+    if(Cookies.get('progress') != null)
+        story.state.LoadJson(Cookies.get('progress'));
     var currentPage = 0;
     var blockNav = false;
 
@@ -19,6 +19,7 @@
         gotoPage(entrySelection);
     });
     document.getElementById("btn-campaign").addEventListener("click", () => {
+        setupCampaignLog();
         gotoPage(campaignLogPage);
     });
     document.getElementById("btn-log").addEventListener("click", () => {
@@ -85,6 +86,25 @@
             if( t < 1 ) requestAnimationFrame(step);
         }
         requestAnimationFrame(step);
+    }
+
+    function setupCampaignLog()
+    {
+        var eventsContainer = document.getElementById("notable-events");
+        var missionContainer = document.getElementById("missions");
+        eventsContainer.childNodes = new Array();
+        for (let [key, value] of eventMap) 
+        {
+            console.log("visited? " + key);
+            if(story.state.VisitCountAtPathString(key) > 0)
+            {
+                console.log(key);
+                var element = document.createElement('p');
+                element.classList.add("show");
+                element.innerHTML = `<span style="margin-right: 10px"><i class="bi bi-bookmark-fill"></i></span>${value.toUpperCase()}`;
+                eventsContainer.appendChild(element);
+            }
+        }
     }
 
     function parseEntry(e) {
